@@ -1,3 +1,6 @@
+# A function to cheat on assignment 3.1 of the PIPS course.
+# You can get the awnsers for question 6, 8 and 13. 
+
 # packages
 library(meme)
 library(ggplot2)
@@ -6,7 +9,8 @@ library(ggplot2)
 cheat <- function (question) {
   
   
-  # Function to open script from url
+  # Function to open script from url 
+  # Copied from https://stackoverflow.com/questions/36715847/load-r-files-from-url
   rs_url_open <- function(URL) {
     tf <- tempfile(fileext = ".R")
     download.file(URL, tf, quiet = TRUE)
