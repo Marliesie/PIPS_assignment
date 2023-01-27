@@ -10,7 +10,7 @@ library(ggplot2)
 cheat <- function (question) {
   
   
-  # Function to open script from url
+  # Function to open script from url (from https://stackoverflow.com/questions/36715847/load-r-files-from-url)
   rs_url_open <- function(URL) {
     tf <- tempfile(fileext = ".R")
     download.file(URL, tf, quiet = TRUE)
