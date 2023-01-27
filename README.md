@@ -34,6 +34,8 @@ How to use:
 cheat(question)
 ```
 
+Arguments:
+
 question: The number of the question you want to cheat on
 
 
@@ -68,7 +70,7 @@ n too large), this will only result in the inner color being light gray, and
 looks just as nice!
 
 
-example:
+Example:
 
 ```
 make_art(25, 2093, 1837)
