@@ -1,0 +1,45 @@
+# packages
+library(meme)
+library(ggplot2)
+
+# funtion
+cheat <- function (question) {
+  
+  
+  # Function to open script from url
+  rs_url_open <- function(URL) {
+    tf <- tempfile(fileext = ".R")
+    download.file(URL, tf, quiet = TRUE)
+    rstudioapi::navigateToFile(tf)
+  }
+  
+  # Create meme
+  cheat_meme <- meme("https://imgflip.com/s/meme/Angry-Baby.jpg", 
+                     upper = "No Cheating!", 
+                     vjust = .1, 
+                     size = 3)  
+  
+  # Answers for each question
+  if (question == 6) {
+    rs_url_open(
+      paste0("https://raw.githubusercontent.com/Marliesie/",
+             "PIPS_assignment/main/3_1_question_6.R")
+    )
+    answer <- "open question 6"
+  } else if (question == 8) {
+    rs_url_open(
+      paste0("https://raw.githubusercontent.com/Marliesie/",
+             "PIPS_assignment/main/3_1_question_8.R")
+    )
+    answer <- "open question 8"
+  } else if (question == 13) {
+    rs_url_open(
+      paste0("https://raw.githubusercontent.com/Marliesie/",
+             "PIPS_assignment/main/3_1_question_13.R")
+    )
+    answer <- "open question 13"
+  } else {
+    answer <- print(cheat_meme)
+  }
+  return(answer)
+}
